@@ -1,3 +1,4 @@
-/server/server/__pycache__
-/server/covdm/__pycache__
-/server/covdm/migrations/__pycache__
+/server/__pycache__
+/covdm/__pycache__
+/covdm/migrations/__pycache__
+/.vscode/

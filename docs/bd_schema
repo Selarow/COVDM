@@ -1,0 +1,24 @@
+
+Table users as U {
+  id int [pk, increment] // 0 à +inf
+  birthdate date
+  isvac boolean
+  vacdate date
+  center_id int
+}
+
+Table centers as C {
+  id int [pk, increment] // 0 à 3277
+  adresse varchar
+  longitude float8
+  latitude float8
+  mod_prel varchar
+  public varchar
+  horaire varchar
+  check_rdv varchar
+  tel_redv varchar
+  web_rdv varchar
+  acces_restreint boolean
+}
+
+Ref: U.center_id > centers.id
