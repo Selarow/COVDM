@@ -20,7 +20,7 @@ class Patient :
         self.date_vaccination = date
         self.age = age
         
-        if self.age <= 70 :
+        if self.age <= 60 :
             self.vaccinated = False
         if not self.vaccinated :
             self.date_vaccination = "_"
@@ -75,7 +75,7 @@ class DataBase :
             #---patient creation---
             p = Patient(i,v,l,d,ag)
             dic[i] = p
-        self.db = dic
+        self.db = dic #add on db
     
     
 db_patient = DataBase(100000)
