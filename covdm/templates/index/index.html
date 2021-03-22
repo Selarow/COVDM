@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>COVDM</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="icon2.png"/>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'icon2.png' %}" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -12,18 +13,20 @@
 
 <body>
     <ul>
-        <li><a id="title" href="">COVDM</a></li>
-        <li><div id="border"></div></li>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="map.html">Map</a></li>
-        <li><a href="stats.html">Stats</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a id="title" href="home">COVDM</a></li>
+        <li>
+            <div id="border"></div>
+        </li>
+        <li><a class="active" href="home">Home</a></li>
+        <li><a href="map">Map</a></li>
+        <li><a href="stats">Stats</a></li>
+        <li><a href="about">About</a></li>
     </ul>
     <div id="content">
         <p>blablablablablablablablablablablabla</p>
         <div id="map"></div>
     </div>
 </body>
-<script type="text/javascript" src="scripts.js"></script>
+<script type="text/javascript" src="{% static 'scripts.js' %}"></script>
 
 </html>
