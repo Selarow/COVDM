@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+:root {
+    --black: #202020;
+    --black-medium: #333333;
+    --black-light: #3F3F3F;
+    --grey: #707070;
+    --red: #FF5154;
+}
+
+body {
+    background: var(--black-light);
+}
+
+p {
+    font-family: "Poiret One";
+    font-size: 25px;
+    color: var(--grey);
+    font-weight: bold;
+    text-align: center;
+}
+
+#map {
+    width: 800px;
+    height: 800px;
+    margin: 0px auto;
+    display: inline-block;
+}
+
+#content {
+    top: 50px;
+    width: 100%;
+    height: 100%;
+    position: fixed; 
+    text-align: center;
+}
+
+li p {
+    color: var(--red);
+    margin: 9px 20px 0px 20px;
+    
+}
+
+#border {
+    border-left: 1px solid rgba(112, 112, 112, 0.5);
+    height: 25px;
+    margin: 11px 5px 11px 5px;
+}
+
+ul {
+    display: table;
+    border-spacing: 15px 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--black-medium);
+    position: fixed;
+    top: 0;
+    left: -15px;
+    width: 200%;
+    
+}
+  
+li {
+    float: left;
+}
+
+#title {
+    font-size: 25px;
+    height: 45px;
+    color: var(--red);
+    border-bottom: 2px solid var(--black-medium);
+}
+  
+li a {
+    display: table-cell;
+    color: white;
+    font-family: "Poiret One";
+    font-weight: bold;
+    height: 45px;
+    border-collapse: collapse;
+    vertical-align: middle;
+    text-decoration: none;
+}
+  
+li a:hover {
+    color: var(--red);
+}
+
+.active {
+    color: var(--red);
+    border-bottom: 2px solid var(--red);
+}
