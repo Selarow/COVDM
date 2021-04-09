@@ -31,7 +31,15 @@ class Patient :
         else : v = " n'a pas été vacciné au "
         patient = "Le patient d'ID "+str(self.patient_id)+" agé de "+str(self.age)+" an(s)"+v+str(self.facility)+" le "+self.date_vaccination
         return patient
-
+    
+    def convert_query(self) :
+        query_vaccin = 0
+        vaccine_date = "NULL"
+        if self.vaccinated : 
+            query_vaccin = 1 
+            vaccine_date = f"'{self.date_vaccination}'"
+        query = f"({self.patient_id},{query_vaccin},{self.facility},{vaccine_date},{self.age})"
+        return query
         
 class DataBase :
     #---CONST---
@@ -76,8 +84,25 @@ class DataBase :
             p = Patient(i,v,l,d,ag)
             dic[i] = p
         self.db = dic #add on db
+        
+    def convert_query(self) :
+        file = open("docs/query.txt","w")
+        #------------DB Head---------------
+        #--------all the code below respect the syntax and types of sqlite documentation-----
+        file.write("CREATE DATABASE covdm;\n")
+        file.write("CREATE TABLE patient(\n")
+        file.write("id INTEGER PRIMARY KEY,\n is_vaccinated INTEGER,\n facility INTEGER,\n vaccination_date TEXT,\n age INTEGER\n")
+        file.write(");\n")
+        
+        #----------DB Insertion------------
+        file.write("INSERT INTO patient(id,is_vaccinated,facility,vaccination_date,age) VALUES\n")
+        for i in range(1,len(self.db)) :
+            file.write(self.db[i].convert_query())
+            if i != len(self.db)-1 : file.write(",\n")
+            else : file.write(";\n")
+            
+        file.close()
     
     
 db_patient = DataBase(100000)
-for p in db_patient.db :
-    print(db_patient.db[p])
+db_patient.convert_query()
