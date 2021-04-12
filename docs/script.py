@@ -89,13 +89,13 @@ class DataBase :
         file = open("docs/query.txt","w")
         #------------DB Head---------------
         #--------all the code below respect the syntax and types of sqlite documentation-----
-        file.write("CREATE DATABASE covdm;\n")
-        file.write("CREATE TABLE patient(\n")
+        """ file.write("CREATE DATABASE covdm;\n")
+        file.write("CREATE TABLE covdm_(\n")
         file.write("id INTEGER PRIMARY KEY,\n is_vaccinated INTEGER,\n facility INTEGER,\n vaccination_date TEXT,\n age INTEGER\n")
-        file.write(");\n")
+        file.write(");\n") """
         
         #----------DB Insertion------------
-        file.write("INSERT INTO patient(id,is_vaccinated,facility,vaccination_date,age) VALUES\n")
+        file.write("INSERT INTO covdm_user(id,is_vaccinated,facility,vaccination_date,age) VALUES\n")
         for i in range(1,len(self.db)) :
             file.write(self.db[i].convert_query())
             if i != len(self.db)-1 : file.write(",\n")
