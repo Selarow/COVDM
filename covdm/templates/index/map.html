@@ -3,22 +3,17 @@
 <html>
 
 <head>
-    <title>COVDM - Map</title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <link rel="icon" type="image/png" href="{% static 'icon2.png' %}" />
+    <title>Map - COVDM</title>
+    <link rel="icon" type="image/png" href="{% static 'icon.png' %}" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 </head>
 
 <body>
-    <ul>
-        <li><a id="title" href="home">COVDM</a></li>
-        <li>
-            <div id="border"></div>
-        </li>
-        <li><a href="home">Home</a></li>
-        <li><a class="active" href="map">Map</a></li>
-        <li><a href="stats">Stats</a></li>
-        <li><a href="about">About</a></li>
-    </ul>
+    {% include 'index/navbar.html' with map="active" only %}
 </body>
+
+<script type="text/javascript" src="{% static 'scripts.js' %}"></script>
 
 </html>

@@ -1,11 +1,10 @@
 from django.shortcuts import render, redirect
 
-# Create your views here.
 def index(request):
     return redirect("home")
 
 def home(request):
-    return render(request, "index/index.html")
+    return render(request, "index/home.html")
 
 def map(request):
     return render(request, "index/map.html")
