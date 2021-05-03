@@ -1,4 +1,6 @@
 import random
+import json
+
 random.seed(1012021)
 
 class Patient :
@@ -20,7 +22,7 @@ class Patient :
         self.date_vaccination = date
         self.age = age
         
-        if self.age <= 60 :
+        if self.age <= 40 :
             self.vaccinated = False
         if not self.vaccinated :
             self.date_vaccination = "_"
@@ -102,7 +104,10 @@ class DataBase :
             else : file.write(";\n")
             
         file.close()
+        
+    def to_json(self) :
+       return json.dumps(self.db)
     
     
 db_patient = DataBase(100000)
-db_patient.convert_query()
+db_patient.to_json()
