@@ -9,6 +9,9 @@
 
 <body>
   {% include 'index/navbar.html' with home="active" only %}
+  {% for center in centers %}
+    <p> {{center.name}} </p>
+  {% endfor %}
 </body>
 
 </html>

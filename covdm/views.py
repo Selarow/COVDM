@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect
+from .models import Center
 
 def index(request):
     return redirect("home")
 
 def home(request):
-    return render(request, "index/home.html")
+    centers = Center.objects.all()
+    return render(request, "index/home.html", {"centers":centers})
 
 def map(request):
     return render(request, "index/map.html")

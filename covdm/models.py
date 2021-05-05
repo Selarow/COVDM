@@ -4,8 +4,9 @@ class Center(models.Model):
 
     name = models.CharField(max_length=100)
     adress = models.CharField(max_length=100)
-    longitude = models.DecimalField(max_digits=15, decimal_places=14)
-    latitude = models.DecimalField(max_digits=15, decimal_places=13)
+    region = models.IntegerField(null=True)
+    longitude = models.CharField(max_length=20, null=True)
+    latitude = models.CharField(max_length=20, null=True)
     sampling = models.CharField(max_length=50)
     public = models.CharField(max_length=250)
     timetable = models.CharField(max_length=250, blank=True)
