@@ -12,8 +12,8 @@ const dataVAC = {
     labels: labelVAC,
     datasets : [{
         label: "Evolution de la vaccination en France",
-        backgroundColor: 'rgb(255,13,70)',
-        borderColor: 'rgb(255,13,70)',
+        backgroundColor: '#61040D',
+        borderColor: '#61040D',
         data: [0,32631,55681,11256]
     }]
 };
@@ -44,18 +44,18 @@ const dataAGE = {
     labels: labelAGE,
     datasets : [{
         label: "Malade",
-        backgroundColor: 'rgb(255,13,70)',
-        borderColor: 'rgb(255,0,0)',
+        backgroundColor: '#61040D',
+        borderColor: '#61040D',
         data: [65324,50326,32569,30569,29865,27569,26539]
     },
     {   label:"Mort",
-        backgroundColor: 'rgb(0,0,0)',
-        borderColor: 'rgb(255,255,255)',
+        backgroundColor: '#050101',
+        borderColor: '#050101',
         data: [124,126,169,172,1365,1269,1339]
     },
     {   label: "Vaccinés",
-        backgroundColor: 'rgb(30,255,99)',
-        borderColor: 'rgb(0,255,0)',
+        backgroundColor: '#046115',
+        borderColor: '#046115',
         data : [0,0,9652,1235,3365,9269,8339]
     }
     ]

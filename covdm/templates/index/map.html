@@ -17,9 +17,13 @@
     {% include 'index/navbar.html' with map="active" only %}
     <div class="content">
         <div id="map"></div>
+        <div>
+            <canvas id="chart"></canvas>
+        </div>
     </div>
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript" src="{% static 'scripts.js' %}"></script>
 
 </html>

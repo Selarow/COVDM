@@ -4,6 +4,69 @@ var data = [{"id": 0, "name": "CH DU HAUT BUGEY - GEOVREISSET", "address": "1 RT
 {"id": 1, "name": "Def", "address": "Def 52", "longitude": 7.27287780162723, "latitude": 43.7394118428928, "sampling": "", "public": "", "timetable": "", "checkapp": "", "phoneapp": "", "webapp": "", "restricted": ""},
 {"id": 2, "name": "Ghi", "address": "Ghi 53", "longitude": 7.1172322292086, "latitude": 43.6011346134398, "sampling": "", "public": "", "timetable": "", "checkapp": "", "phoneapp": "", "webapp": "", "restricted": ""}]
 
+var dictReg = {
+
+    
+ 
+    "Auvergne-Rhône-Alpes": [65324,70326,32569],
+ 
+    "Bourgogne-Franche-Comté": [65324,70326,32569],
+ 
+    "Bretagne": [65324,70326,32569],
+ 
+    "Centre-Val de Loire": [65324,70326,32569],
+
+    "Corse" : [667,2040,32569],
+
+    "Grand Est" : [7891,7078,3444],
+
+    "Hauts-de-France" : [65321,70325,32478],
+
+    "Île-de-France" : [6758,7047,3478],
+
+    "Normandie" : [1454,7455,32569],
+
+    "Nouvelle-Aquitaine" : [45324,20326,569],
+
+    'Occitanie': [65324,70326,32569],
+
+    "Pays de la Loire" : [4324,100326,12569],
+
+    "Provence-Alpes-Côte d'Azur" : [45324,90326,2569]
+};
+
+//chart
+const dataGeo = {
+    labels: ['Malade','Vaccinées','Mort'],
+    datasets : [{
+        label: "Malade",
+        backgroundColor: ['#61040D','#046115','#050101'],
+        data: [5706378,16470369,105631]
+    }]
+};
+
+const configGeo = {
+    type: 'doughnut',
+    data: dataGeo,
+    options: {
+      plugins: {
+        title: {
+          display: true,
+          text: 'Statistiques Nationales'
+        },
+      },
+      responsive: true,
+      
+      }
+    
+  };
+
+var chartGeo = new Chart(
+    document.getElementById('chart'),
+    configGeo
+)
+
+
 
 function style(feature) {
     return {
@@ -25,7 +88,7 @@ function onEachFeature(feature, layer) {
 
 function setHighlight(e) {
     var layer = e.target;
-
+    
     layer.setStyle({
         weight: 4,
         color: '#666666',
@@ -40,7 +103,15 @@ function resetHighlight(e) {
 }
 
 function updateData(e) {
+    
     var layer = e.target;
+    var region = layer.feature.properties['nom'];
+    
+    chartGeo.options.plugins.title.text = 'Statistiques de la Région '+region;
+    console.log(dictReg[region]);
+    chartGeo.data.datasets[0].data = dictReg[region];
+    chartGeo.update()
+
 
     layer.setStyle({
         color: '#FF0000'
@@ -73,3 +144,5 @@ let geoJSONLayer = L.geoJson(france, {
     style: style,
     onEachFeature: onEachFeature
 }).addTo(map);
+
+
