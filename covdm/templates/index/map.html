@@ -6,12 +6,18 @@
     <title>Map - COVDM</title>
     <link rel="icon" type="image/png" href="{% static 'icon.png' %}" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js"></script>
+    <script type="text/javascript" src="{% static 'france.js' %}"></script>
 </head>
 
 <body>
     {% include 'index/navbar.html' with map="active" only %}
+    <div class="content">
+        <div id="map"></div>
+    </div>
 </body>
 
 <script type="text/javascript" src="{% static 'scripts.js' %}"></script>
