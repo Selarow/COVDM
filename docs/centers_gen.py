@@ -3,7 +3,7 @@
 from json import load
 
 # Lecture du json
-centers = load(open('output2.json'))
+centers = load(open('output_with_reg.json'))
 
 # Création d'un fichier texte pour y stocker le script
 fichier = open("centers_gen2.txt", "a")
@@ -13,7 +13,7 @@ fichier.write("INSERT INTO covdm_center (id, name, adress, region, longitude, la
 fichier.write("VALUES"+"\n")
 
 # Initialisation d'un compteur de centres
-cnt = 1
+cnt = 0
 
 # Parcours et Traitement du fichier JSON (des centres)
 for center in centers:

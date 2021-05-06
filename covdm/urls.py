@@ -20,6 +20,9 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
+    path("getDatas", views.getDatas, name="getDatas"),
+    path("getCenters", views.getCenters, name="getCenters"),
+    path("getUsers", views.getUsers, name="getUsers"),
     path("home", views.home, name="home"),
     path("map", views.map, name="map"),
     path("stats", views.stats, name="stats"),

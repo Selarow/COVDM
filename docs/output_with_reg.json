@@ -111,7 +111,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "06606",
-        "region": null
+        "region": 93
     },
     {
         "id": "Mt1Rdg0pIEE08g98",
@@ -415,7 +415,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "13616",
-        "region": null
+        "region": 93
     },
     {
         "id": "FmlHmJQbUywjaTAq",
@@ -795,7 +795,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "31806",
-        "region": null
+        "region": 76
     },
     {
         "id": "wf5qoL3wPeXPQUvY",
@@ -1118,7 +1118,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "33608",
-        "region": null
+        "region": 76
     },
     {
         "id": "LA5PX0K2AJJqXsvW",
@@ -1973,7 +1973,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "75571",
-        "region": null
+        "region": 11
     },
     {
         "id": "tdyMuft2d8WQObw4",
@@ -1992,7 +1992,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "75181",
-        "region": null
+        "region": 11
     },
     {
         "id": "Qx7jdsq2JE7W9Is5",
@@ -2011,7 +2011,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "75475",
-        "region": null
+        "region": 11
     },
     {
         "id": "8cadSK0yrrl9B8l8",
@@ -2030,7 +2030,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "75571",
-        "region": null
+        "region": 11
     },
     {
         "id": "Z4kIOcyqIZoIdwWO",
@@ -2049,7 +2049,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "75651",
-        "region": null
+        "region": 11
     },
     {
         "id": "FKCyh0vR9EejkKZa",
@@ -2068,7 +2068,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "75679",
-        "region": null
+        "region": 11
     },
     {
         "id": "bak6n7lgZwXjxg77",
@@ -2087,7 +2087,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "75743",
-        "region": null
+        "region": 11
     },
     {
         "id": "xRvpyyICUDiDt25O",
@@ -2106,7 +2106,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "75877",
-        "region": null
+        "region": 11
     },
     {
         "id": "VtobcDrxIZ1sE7Yi",
@@ -2125,7 +2125,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "75970",
-        "region": null
+        "region": 11
     },
     {
         "id": "bJzglnPK86Ufy9j1",
@@ -2144,7 +2144,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "75908",
-        "region": null
+        "region": 11
     },
     {
         "id": "AuwatWOLvXZOzctB",
@@ -2163,7 +2163,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "92104",
-        "region": null
+        "region": 11
     },
     {
         "id": "WyIFOdayN8ikoKZf",
@@ -2182,7 +2182,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "94206",
-        "region": null
+        "region": 11
     },
     {
         "id": "7j3IshkifCGcOpST",
@@ -2220,7 +2220,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "33882",
-        "region": null
+        "region": 75
     },
     {
         "id": "bJKBcBGr8gSWywx0",
@@ -2296,7 +2296,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "78201",
-        "region": null
+        "region": 11
     },
     {
         "id": "tKZjHDitorDZq8Fn",
@@ -2410,7 +2410,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "83507",
-        "region": null
+        "region": 93
     },
     {
         "id": "rgDISav9xxoXbsa3",
@@ -2429,7 +2429,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "83507",
-        "region": null
+        "region": 93
     },
     {
         "id": "tLmCGlCk6qZ6LkCn",
@@ -2448,7 +2448,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "83507",
-        "region": null
+        "region": 93
     },
     {
         "id": "TAUrJU339PyWkNnZ",
@@ -2657,7 +2657,7 @@
         "web_rdv": "",
         "acces_restreint": true,
         "insee_com": "97448",
-        "region": null
+        "region": 4
     },
     {
         "id": "HlI2rCJ014Dk4X3Z",
@@ -3436,7 +3436,7 @@
         "web_rdv": "scr_lab@ch-brianon.fr",
         "acces_restreint": false,
         "insee_com": "05105",
-        "region": null
+        "region": 93
     },
     {
         "id": "62NZ82L18UXqH0Um",
@@ -3683,7 +3683,7 @@
         "web_rdv": "www.labo-barla.eu",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 93
     },
     {
         "id": "WPzKuMApWGjDiOFT",
@@ -3816,7 +3816,7 @@
         "web_rdv": "www.labo-barla.eu",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 93
     },
     {
         "id": "UTDPs8e79F1p0tdM",
@@ -6229,7 +6229,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 76
     },
     {
         "id": "TxE0UgpdlP3vrODk",
@@ -6381,7 +6381,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "12402",
-        "region": null
+        "region": 76
     },
     {
         "id": "wfRRO71LZn8oYItq",
@@ -10713,7 +10713,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "13698",
-        "region": null
+        "region": 93
     },
     {
         "id": "r9x1YEArdl3k5hbJ",
@@ -11758,7 +11758,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "17503",
-        "region": null
+        "region": 75
     },
     {
         "id": "FpDyl2mulya6Mmlb",
@@ -11910,7 +11910,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "19312",
-        "region": null
+        "region": 75
     },
     {
         "id": "olFpsqm2o2wijjWI",
@@ -12594,7 +12594,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "22501",
-        "region": null
+        "region": 53
     },
     {
         "id": "YLJv0Cn3BF0QgCOP",
@@ -13506,7 +13506,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "26953",
-        "region": null
+        "region": 84
     },
     {
         "id": "r9vCxAyewnC6JBzz",
@@ -14741,7 +14741,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "29609",
-        "region": null
+        "region": 53
     },
     {
         "id": "JvcHMlCwToIqJgKl",
@@ -15482,7 +15482,7 @@
         "web_rdv": "SAMU",
         "acces_restreint": false,
         "insee_com": "20184",
-        "region": null
+        "region": 94
     },
     {
         "id": "nSsV4nFbiaioS2mA",
@@ -19149,7 +19149,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 75
     },
     {
         "id": "1OgILtF0p7Fj4nog",
@@ -20232,7 +20232,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "34525",
-        "region": null
+        "region": 76
     },
     {
         "id": "iOZYN9FMEqeJBd7U",
@@ -20251,7 +20251,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "34525",
-        "region": null
+        "region": 76
     },
     {
         "id": "MKKyDPwoFAzBvmRS",
@@ -21391,7 +21391,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "37403",
-        "region": null
+        "region": 24
     },
     {
         "id": "RXx2dPpdM8agjUly",
@@ -24602,7 +24602,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "45503",
-        "region": null
+        "region": 24
     },
     {
         "id": "uoxlCYa85fj8H0c1",
@@ -25419,7 +25419,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "49933",
-        "region": null
+        "region": 52
     },
     {
         "id": "cOAIdKZY1exEo4vZ",
@@ -25875,7 +25875,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 52
     },
     {
         "id": "4caQfRid4GBaLFYC",
@@ -26407,7 +26407,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "50303",
-        "region": null
+        "region": 28
     },
     {
         "id": "dGct11cncwDiWGeW",
@@ -28459,7 +28459,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "56322",
-        "region": null
+        "region": 53
     },
     {
         "id": "eJJ3qgTKC66Azc4k",
@@ -31936,7 +31936,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 32
     },
     {
         "id": "yyP10xE9qig4DUfe",
@@ -32069,7 +32069,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 32
     },
     {
         "id": "u15gOsnfUUBmXla2",
@@ -32335,7 +32335,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 32
     },
     {
         "id": "2GOgl5phYqzguxYA",
@@ -32411,7 +32411,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 32
     },
     {
         "id": "3UDzRrH6z9GvVGa1",
@@ -34273,7 +34273,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "60607",
-        "region": null
+        "region": 32
     },
     {
         "id": "J9n31yuAYFYnpjQc",
@@ -37788,7 +37788,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 76
     },
     {
         "id": "InpOL7LNKhiDXkOy",
@@ -38206,7 +38206,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 76
     },
     {
         "id": "hU8VIrWjm24NEfhD",
@@ -38263,7 +38263,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "66301",
-        "region": null
+        "region": 76
     },
     {
         "id": "1wXJYhJE3Z4eP2ge",
@@ -38567,7 +38567,7 @@
         "web_rdv": "www.bio67.fr",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 44
     },
     {
         "id": "p58YBZZo2QxUa9Fh",
@@ -38662,7 +38662,7 @@
         "web_rdv": "www.bio67.fr",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 44
     },
     {
         "id": "kneKfzPEJGUH3On6",
@@ -39251,7 +39251,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "67703",
-        "region": null
+        "region": 44
     },
     {
         "id": "3uNHoTCieDIqzsV4",
@@ -39289,7 +39289,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "67606",
-        "region": null
+        "region": 44
     },
     {
         "id": "gPjvzbz6Y81QNBjW",
@@ -41436,7 +41436,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 84
     },
     {
         "id": "t0KqHAtHx8noQNGq",
@@ -44096,7 +44096,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 84
     },
     {
         "id": "nfPLrtfCgwY1dwb8",
@@ -45141,7 +45141,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "74703",
-        "region": null
+        "region": 84
     },
     {
         "id": "LBZFJEr0fYB7koNu",
@@ -45806,7 +45806,7 @@
         "web_rdv": "TEL",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 11
     },
     {
         "id": "0Bq3gn0xNkNFlbl2",
@@ -47649,7 +47649,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "75674",
-        "region": null
+        "region": 11
     },
     {
         "id": "QPulFA2f7tTCQZvI",
@@ -47687,7 +47687,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "93009",
-        "region": null
+        "region": 11
     },
     {
         "id": "dKGL5AtCwhnGw3Wf",
@@ -47706,7 +47706,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "94804",
-        "region": null
+        "region": 11
     },
     {
         "id": "p2MA4g7OBohMCK6y",
@@ -47725,7 +47725,7 @@
         "web_rdv": "accueillbm@pasteur-guadeloupe.fr",
         "acces_restreint": false,
         "insee_com": "97183",
-        "region": null
+        "region": 11
     },
     {
         "id": "8hxr0w5UwIJjIKrj",
@@ -47744,7 +47744,7 @@
         "web_rdv": "Doctolib",
         "acces_restreint": false,
         "insee_com": "75311",
-        "region": null
+        "region": 11
     },
     {
         "id": "2AyaZ9Cluc6JWMsF",
@@ -47782,7 +47782,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "13384",
-        "region": null
+        "region": 93
     },
     {
         "id": "mx1H5ZnytPouh57M",
@@ -47820,7 +47820,7 @@
         "web_rdv": "Pour les personnes sans symptomes, appeler ce numero, appuyer sur la touche 3 et demander un RDV pour PCR COVID19.",
         "acces_restreint": false,
         "insee_com": "94163",
-        "region": null
+        "region": 11
     },
     {
         "id": "p8cast8chbgPbRLL",
@@ -48086,7 +48086,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 28
     },
     {
         "id": "H1SaQOOwThbyW2pP",
@@ -48827,7 +48827,7 @@
         "web_rdv": "https://www.doctolib.fr/centre-depistage-covid/dives-sur-mer/laboratoire-de-biologie-medicale-cerballiance-dives-sur-mer",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 28
     },
     {
         "id": "27Yl8U3LJQdW80Jb",
@@ -49473,7 +49473,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 11
     },
     {
         "id": "SJhvB7336lhl0iwW",
@@ -49910,7 +49910,7 @@
         "web_rdv": "https://covid19.biogroup.fr/",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 11
     },
     {
         "id": "KSg9mRgrK4lbbulH",
@@ -50290,7 +50290,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 11
     },
     {
         "id": "49p5yVWfNbMSIF2b",
@@ -50746,7 +50746,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "78157",
-        "region": null
+        "region": 11
     },
     {
         "id": "zVgNLDpIz02cjmVy",
@@ -50765,7 +50765,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "79021",
-        "region": null
+        "region": 75
     },
     {
         "id": "NOeIJgwnOf23oOgj",
@@ -52551,7 +52551,7 @@
         "web_rdv": "www.lamsymbiose.fr",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 93
     },
     {
         "id": "WbZht1tf066feg8B",
@@ -53273,7 +53273,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "84902",
-        "region": null
+        "region": 93
     },
     {
         "id": "L629wTDU34GhTh01",
@@ -53767,7 +53767,7 @@
         "web_rdv": "https://www.biorylis.com/contact/prise-de-rdv-depistage-covid/",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 52
     },
     {
         "id": "aBqHdVT9PB6RgfpK",
@@ -55040,7 +55040,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "91415",
-        "region": null
+        "region": 11
     },
     {
         "id": "bfhlD73HYk6gGqHk",
@@ -55059,7 +55059,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "91152",
-        "region": null
+        "region": 11
     },
     {
         "id": "WPQO486FQKuYvv4n",
@@ -55781,7 +55781,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "92202",
-        "region": null
+        "region": 11
     },
     {
         "id": "HSE1PKyc8XMIZBM1",
@@ -56921,7 +56921,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 11
     },
     {
         "id": "5yG29gQJ5DPfbuO8",
@@ -57890,7 +57890,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 11
     },
     {
         "id": "UJrsUP04kvoX8kTj",
@@ -57966,7 +57966,7 @@
         "web_rdv": "rendezvous@hopital-foch.org",
         "acces_restreint": false,
         "insee_com": "92151",
-        "region": null
+        "region": 11
     },
     {
         "id": "cSbo4OfTUOsJxRzu",
@@ -58745,7 +58745,7 @@
         "web_rdv": "0142356057",
         "acces_restreint": false,
         "insee_com": "93205",
-        "region": null
+        "region": 11
     },
     {
         "id": "bCut7FnF1X3gT9dS",
@@ -58802,7 +58802,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "93602",
-        "region": null
+        "region": 11
     },
     {
         "id": "fRLNljQp9ES00CoO",
@@ -58821,7 +58821,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "94195",
-        "region": null
+        "region": 11
     },
     {
         "id": "Fii3BrS8jhwOdeN8",
@@ -58916,7 +58916,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "",
-        "region": null
+        "region": 11
     },
     {
         "id": "NXt5sHEVNzpz3sSn",
@@ -59999,7 +59999,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "94195",
-        "region": null
+        "region": 11
     },
     {
         "id": "yinIkjZxegJYvhbm",
@@ -60018,7 +60018,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "95602",
-        "region": null
+        "region": 11
     },
     {
         "id": "HskFVR6OwSxglbWn",
@@ -60588,7 +60588,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "95107",
-        "region": null
+        "region": 11
     },
     {
         "id": "kkeYoIsFTJoaePPH",
@@ -60607,7 +60607,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "95503",
-        "region": null
+        "region": 11
     },
     {
         "id": "Lt9HF2YnTcSUJcDv",
@@ -60949,7 +60949,7 @@
         "web_rdv": "",
         "acces_restreint": false,
         "insee_com": "97261",
-        "region": null
+        "region": 2
     },
     {
         "id": "GjJRm9aKj3BLLbjk",
@@ -61006,7 +61006,7 @@
         "web_rdv": "biosante.covid19@gmail.com",
         "acces_restreint": false,
         "insee_com": "97261",
-        "region": null
+        "region": 2
     },
     {
         "id": "rf9WmI3jZplChZKM",
