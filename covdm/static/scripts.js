@@ -4,31 +4,31 @@ var data = [{"id": 0, "name": "CH DU HAUT BUGEY - GEOVREISSET", "address": "1 RT
 {"id": 1, "name": "Def", "address": "Def 52", "longitude": 7.27287780162723, "latitude": 43.7394118428928, "sampling": "", "public": "", "timetable": "", "checkapp": "", "phoneapp": "", "webapp": "", "restricted": ""},
 {"id": 2, "name": "Ghi", "address": "Ghi 53", "longitude": 7.1172322292086, "latitude": 43.6011346134398, "sampling": "", "public": "", "timetable": "", "checkapp": "", "phoneapp": "", "webapp": "", "restricted": ""}]
 var dictReg = {
-    "Auvergne-Rhône-Alpes": [65324,70326,32569],
+    "Auvergne-Rhône-Alpes": [362814,1963389,11143],
  
-    "Bourgogne-Franche-Comté": [65324,70326,32569],
+    "Bourgogne-Franche-Comté": [565324,743275,4597],
  
-    "Bretagne": [65324,70326,32569],
+    "Bretagne": [131465,973363,1540],
  
-    "Centre-Val de Loire": [65324,70326,32569],
+    "Centre-Val de Loire": [251174,676421,2565],
 
-    "Corse" : [667,2040,32569],
+    "Corse" : [48630,116916,198],
 
-    "Grand Est" : [7891,7078,3444],
+    "Grand Est" : [756322,1435826,9772],
 
-    "Hauts-de-France" : [65321,70325,32478],
+    "Hauts-de-France" : [465896,2549239,19301],
 
-    "Île-de-France" : [6758,7047,3478],
+    "Île-de-France" : [1698362,2549239,19301],
 
-    "Normandie" : [1454,7455,32569],
+    "Normandie" : [314654,919724,3108],
 
-    "Nouvelle-Aquitaine" : [45324,20326,569],
+    "Nouvelle-Aquitaine" : [263579,1755353,3586],
 
-    'Occitanie': [65324,70326,32569],
+    'Occitanie': [397410,1628505,4264],
 
-    "Pays de la Loire" : [4324,100326,12569],
+    "Pays de la Loire" : [213487,977421,2573],
 
-    "Provence-Alpes-Côte d'Azur" : [45324,90326,2569]
+    "Provence-Alpes-Côte d'Azur" : [448435,1381205,7638]
 };
 
 
@@ -106,7 +106,6 @@ function updateData(e) {
     var region = layer.feature.properties['nom'];
     
     chartGeo.options.plugins.title.text = 'Statistiques de la Région '+region;
-    console.log(dictReg[region]);
     chartGeo.data.datasets[0].data = dictReg[region];
     chartGeo.update()
 

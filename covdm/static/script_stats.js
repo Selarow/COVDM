@@ -1,5 +1,78 @@
 //------------------------------Chart 1, Vaccination number per day-----------------
 console.log(patients);
+var arr = patients[0]
+var datV = [0,0,0,0,0,0];
+var datS = [0,0,0,0,0,0];
+var datD = [0,0,0,0,0,0];
+
+for (var i = 1;i<100000;i++){
+  var v = arr[i][0];
+  var s = arr[i][1];
+  var d = arr[i][2];
+  var a = arr[i][5];
+
+  if(v){
+    if(a>=20 && a<30){
+      datV[0]++;
+    }
+    else if(a>=30 && a<40){
+      datV[1]++;
+    }
+    else if(a>=40 && a<50){
+      datV[2]++;
+    }
+    else if(a>=50 && a<60){
+      datV[3]++;
+    }
+    else if(a>=60 && a<70){
+      datV[4]++;
+    }
+    else if(a>=70 && a<80){
+      datV[5]++;
+    }
+  } 
+  if(s){
+    if(a>=20 && a<30){
+      datS[0]++;
+    }
+    else if(a>=30 && a<40){
+      datS[1]++;
+    }
+    else if(a>=40 && a<50){
+      datS[2]++;
+    }
+    else if(a>=50 && a<60){
+      datS[3]++;
+    }
+    else if(a>=60 && a<70){
+      datS[4]++;
+    }
+    else if(a>=70 && a<80){
+      datS[5]++;
+    }
+  } 
+  if(d){
+    if(a>=20 && a<30){
+      datD[0]++;
+    }
+    else if(a>=30 && a<40){
+      datD[1]++;
+    }
+    else if(a>=40 && a<50){
+      datD[2]++;
+    }
+    else if(a>=50 && a<60){
+      datD[3]++;
+    }
+    else if(a>=60 && a<70){
+      datD[4]++;
+    }
+    else if(a>=70 && a<80){
+      datD[5]++;
+    }
+  }
+}
+
 
 const labelVAC = [
     'Janvier 2021',
@@ -14,7 +87,7 @@ const dataVAC = {
         label: "Évolution de la vaccination en France",
         backgroundColor: '#41c45d',
         borderColor: '#41c45d',
-        data: [0,32631,55681,11256]
+        data: [0,22631,35681,81256]
     },
     {
       label: "Évolution des contaminés en France",
@@ -59,17 +132,17 @@ const dataAGE = {
         label: "Malade",
         backgroundColor: '#f14b4d',
         borderColor: '#61040D',
-        data: [65324,50326,32569,30569,29865,27569,26539]
+        data: datS
     },
     {   label:"Mort",
         backgroundColor: '#050101',
         borderColor: '#050101',
-        data: [124,126,169,172,1365,1269,1339]
+        data: datD
     },
     {   label: "Vaccinés",
         backgroundColor: '#41c45d',
         borderColor: '#41c45d',
-        data : [0,0,9652,1235,3365,9269,8339]
+        data : datV
     }
     ]
 };
