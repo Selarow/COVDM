@@ -1,9 +1,5 @@
 //------------------------------Chart 1, Vaccination number per day-----------------
-fetch("docs/patients.json")
-.then(response => {
-   return response.json();
-})
-.then(data => console.log(data));
+console.log(patients);
 
 const labelVAC = [
     'Janvier 2021',

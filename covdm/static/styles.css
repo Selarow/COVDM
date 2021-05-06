@@ -108,11 +108,10 @@ p {
 }
 
 #form {
-
-       width: 50%;
-        border:1px solid;
-        border-color: gray;
-        padding:5px
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
     }
         
     
