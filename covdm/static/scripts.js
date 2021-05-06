@@ -130,6 +130,10 @@ function updateData(e) {
     });
 }
 
+function toForm() {
+    window.location.href = "form";
+}
+
 
 //MAP
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -143,10 +147,10 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 
 //CENTERS
-for (var i = 0; i < data.length; i++) {
-    var marker = L.marker([data[i].latitude, data[i].longitude]);
+for (var i = 0; i < centers.length; i++) {
+    var marker = L.marker([centers[i].latitude, centers[i].longitude]);
     markers.addLayer(marker);
-    marker.bindPopup(data[i].name + "</br>" + data[i].address);
+    marker.bindPopup("<h2>" + centers[i].rs + "</h2>" + "<h3>" + centers[i].adresse + "</h3><h3>" + centers[i].tel_rdv + "</h3>");
 }
 
 map.addLayer(markers);

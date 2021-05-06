@@ -32,3 +32,6 @@ def stats(request):
 
 def about(request):
     return render(request, "index/about.html")
+
+def form(request):
+    return render(request, "index/form.html")

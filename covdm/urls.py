@@ -26,5 +26,6 @@ urlpatterns = [
     path("home", views.home, name="home"),
     path("map", views.map, name="map"),
     path("stats", views.stats, name="stats"),
-    path("about", views.about, name="about")
+    path("about", views.about, name="about"),
+    path("form", views.form, name="form")
 ]
