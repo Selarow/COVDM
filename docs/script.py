@@ -11,27 +11,37 @@ class Patient :
     #---Patient info---
     patient_id = int
     vaccinated = bool
+    sick = bool
+    dead = bool
     facility = int
     date_vaccination = str
     age = int
     
-    def __init__(self,id,vaccin,location,date,age) :
+    def __init__(self,id,vaccin,malade,mort,location,date,age) :
         self.patient_id = id
         self.vaccinated = vaccin
         self.facility = location
         self.date_vaccination = date
         self.age = age
+        self.sick = malade
+        self.dead = mort
         
         if self.age <= 40 :
             self.vaccinated = False
         if not self.vaccinated :
-            self.date_vaccination = "_"
+            self.date_vaccination = None
+        if self.dead :
+            self.vaccinated = False
+            self.sick = False
         
     def __str__(self):
         v = str
-        if self.vaccinated : v = " a été vacciné au "
-        else : v = " n'a pas été vacciné au "
-        patient = "Le patient d'ID "+str(self.patient_id)+" agé de "+str(self.age)+" an(s)"+v+str(self.facility)+" le "+self.date_vaccination
+        if self.vaccinated : v = " a été vacciné au " + str(self.facility) +" le "+ self.date_vaccination
+        else : v = " n'a pas été vacciné au " + str(self.facility)
+        
+        if self.dead : return "Le patient d'ID "+str(self.patient_id)+" agé de "+str(self.age)+" an(s) "+str(self.facility)+" est mort"
+        else :
+            patient = "Le patient d'ID "+str(self.patient_id)+" agé de "+str(self.age)+" an(s)"+v
         return patient
     
     def convert_query(self) :
@@ -42,6 +52,9 @@ class Patient :
             vaccine_date = f"'{self.date_vaccination}'"
         query = f"({self.patient_id},{query_vaccin},{self.facility},{vaccine_date},{self.age})"
         return query
+    
+    def convert_json(self) :
+        return [self.vaccinated,self.sick,self.dead,self.facility,self.date_vaccination,self.age]
         
 class DataBase :
     #---CONST---
@@ -75,6 +88,11 @@ class DataBase :
             
             #---All randoms var---
             v = random.choice([True,False])
+            s = random.choice([True,False])
+            de_prob = [False for i in range(19)]
+            de_prob.append(True)
+            de = random.choice(de_prob)
+            #print("dead",d)
             l = random.randint(1,3277)
             ag = int
             if prob == 2 : ag = random.randint(18,70)
@@ -83,7 +101,7 @@ class DataBase :
             d = str(j)+"/"+str(m)+"/"+str(a)
                         
             #---patient creation---
-            p = Patient(i,v,l,d,ag)
+            p = Patient(i,v,s,de,l,d,ag)
             dic[i] = p
         self.db = dic #add on db
         
@@ -104,10 +122,19 @@ class DataBase :
             else : file.write(";\n")
             
         file.close()
-        
+    
     def to_json(self) :
-       return json.dumps(self.db)
+        dic = dict()
+        for k in self.db :
+            intel = self.db[k].convert_json()
+            dic[k] = intel
+            
+        with open('docs/patients.json', 'w') as f:
+            json.dump(dic,f)
+        return dic
+    
     
     
 db_patient = DataBase(100000)
-db_patient.to_json()
+d = db_patient.to_json()
+
