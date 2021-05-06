@@ -1,57 +1,56 @@
-var centers = $.ajax({
-    url: 'getDatas',
-    type: 'GET',
-    dataType:'json',
-    success: function(data) {
-        console.log(data);
-        return data;
-    },
-    failure: function(data) { 
-        alert('Got an error dude');
-    },
-}); 
-console.log(centers);
+$( document ).ready(function() {
+    $.ajax({
+        url: 'getDatas',
+        type: 'GET',
+        dataType:'json',
+        success: function(data) {
+            addCenters(data.centers);
+            getData(data.users);
+        },
+        failure: function(data) { 
+            alert('Got an error dude');
+        },
+    });  
+});
+
 
 var map = L.map('map').setView([47, 2], 6);
 var markers = L.markerClusterGroup();
-var data = [{"id": 0, "name": "CH DU HAUT BUGEY - GEOVREISSET", "address": "1 RTE DE VEYZIAT 01108 OYONNAX CEDEX", "longitude": 5.62734768997551, "latitude": 46.2750589149894, "sampling": "", "public": "Personnel soignant/patients hospitalisés dans l'etablissement", "timetable": "", "checkapp": "", "phoneapp": "", "webapp": "", "restricted": ""},
-{"id": 1, "name": "Def", "address": "Def 52", "longitude": 7.27287780162723, "latitude": 43.7394118428928, "sampling": "", "public": "", "timetable": "", "checkapp": "", "phoneapp": "", "webapp": "", "restricted": ""},
-{"id": 2, "name": "Ghi", "address": "Ghi 53", "longitude": 7.1172322292086, "latitude": 43.6011346134398, "sampling": "", "public": "", "timetable": "", "checkapp": "", "phoneapp": "", "webapp": "", "restricted": ""}]
 var dictReg = {
-    "Auvergne-Rhône-Alpes": [362814,1963389,11143],
+    "Auvergne-Rhône-Alpes": [65324,70326,32569],
  
-    "Bourgogne-Franche-Comté": [565324,743275,4597],
+    "Bourgogne-Franche-Comté": [65324,70326,32569],
  
-    "Bretagne": [131465,973363,1540],
+    "Bretagne": [65324,70326,32569],
  
-    "Centre-Val de Loire": [251174,676421,2565],
+    "Centre-Val de Loire": [65324,70326,32569],
 
-    "Corse" : [48630,116916,198],
+    "Corse" : [667,2040,32569],
 
-    "Grand Est" : [756322,1435826,9772],
+    "Grand Est" : [7891,7078,3444],
 
-    "Hauts-de-France" : [465896,2549239,19301],
+    "Hauts-de-France" : [65321,70325,32478],
 
-    "Île-de-France" : [1698362,2549239,19301],
+    "Île-de-France" : [6758,7047,3478],
 
-    "Normandie" : [314654,919724,3108],
+    "Normandie" : [1454,7455,32569],
 
-    "Nouvelle-Aquitaine" : [263579,1755353,3586],
+    "Nouvelle-Aquitaine" : [45324,20326,569],
 
-    'Occitanie': [397410,1628505,4264],
+    'Occitanie': [65324,70326,32569],
 
-    "Pays de la Loire" : [213487,977421,2573],
+    "Pays de la Loire" : [4324,100326,12569],
 
-    "Provence-Alpes-Côte d'Azur" : [448435,1381205,7638]
+    "Provence-Alpes-Côte d'Azur" : [45324,90326,2569]
 };
 
 
 //CHART
 const dataGeo = {
-    labels: ['Malades','Vaccinées','Morts'],
+    labels: ['Vaccinées','Malades','Morts'],
     datasets : [{
         label: "Malade",
-        backgroundColor: ['#f14b4d','#41c45d','#050101'],
+        backgroundColor: ['#41c45d','#f14b4d','#050101'],
         data: [5706378,16470369,105631]
     }]
 };
@@ -82,12 +81,24 @@ var chartGeo = new Chart(
 
 function style(feature) {
     return {
-        fillColor: '#000000',
+        fillColor: 'grey',
         weight: 2,
         opacity: 1,
         color: 'white',
         fillOpacity: 0.4
     }
+}
+
+function getColor(c) {
+    return c > 8000 ? '#FF0000' :
+    c > 7000 ? 'ff1e00' :
+    c > 6000 ? 'ff3c00' :
+    c > 5000 ? 'ff6000' :
+    c > 4000 ? 'ff6c00' :
+    c > 3000 ? 'ff9c00' :
+    c > 2000 ? 'ffc600' :
+    c > 1000 ? 'fff600' :
+    'aeff00';
 }
 
 function onEachFeature(feature, layer) {
@@ -117,10 +128,11 @@ function resetHighlight(e) {
 function updateData(e) {
     
     var layer = e.target;
-    var region = layer.feature.properties['nom'];
+    var region = layer.feature.properties['code'];
     
     chartGeo.options.plugins.title.text = 'Statistiques de la Région '+region;
-    chartGeo.data.datasets[0].data = dictReg[region];
+    //console.log(dictReg[region]);
+    chartGeo.data.datasets[0].data = stats[region];
     chartGeo.update()
 
 
@@ -146,13 +158,42 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 
 //CENTERS
-for (var i = 0; i < centers.length; i++) {
-    var marker = L.marker([centers[i].latitude, centers[i].longitude]);
-    markers.addLayer(marker);
-    marker.bindPopup("<h2>" + centers[i].rs + "</h2>" + "<h3>" + centers[i].adresse + "</h3><h3>" + centers[i].tel_rdv + "</h3>");
+var regions_centers = {};
+function addCenters(centers) {
+
+    for (var i = 0; i < centers.length; i++) {
+        if (centers[i].latitude != null) {
+            var marker = L.marker([centers[i].latitude, centers[i].longitude]);
+            markers.addLayer(marker);
+            marker.bindPopup("<h2>" + centers[i].name + "</h2>" + "<h3>" + centers[i].adress + "</h3><h3>" + centers[i].phoneapp + "</h3>");
+        }
+
+        if (centers[i].region != null) {
+            regions_centers[i] = centers[i].region;
+            
+        }
+    }
+
+    map.addLayer(markers);
 }
 
-map.addLayer(markers);
+
+//DATA
+var stats = {};
+function getData(users) {
+    for (var i = 0; i < users.length; i++) {
+            if (stats[regions_centers[users[i].center_id]] == undefined) {
+                stats[regions_centers[users[i].center_id]] = [Number(users[i].is_vaccinated), Number(users[i].sick), Number(users[i].dead)];
+            }
+
+            else {
+                stats[regions_centers[users[i].center_id]][0] += Number(users[i].is_vaccinated);
+                stats[regions_centers[users[i].center_id]][1] += Number(users[i].sick);
+                stats[regions_centers[users[i].center_id]][2] += Number(users[i].dead);
+            }
+    }
+    delete stats[undefined];
+}
 
 
 //LAYER
