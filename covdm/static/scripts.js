@@ -3,11 +3,7 @@ var markers = L.markerClusterGroup();
 var data = [{"id": 0, "name": "CH DU HAUT BUGEY - GEOVREISSET", "address": "1 RTE DE VEYZIAT 01108 OYONNAX CEDEX", "longitude": 5.62734768997551, "latitude": 46.2750589149894, "sampling": "", "public": "Personnel soignant/patients hospitalisés dans l'etablissement", "timetable": "", "checkapp": "", "phoneapp": "", "webapp": "", "restricted": ""},
 {"id": 1, "name": "Def", "address": "Def 52", "longitude": 7.27287780162723, "latitude": 43.7394118428928, "sampling": "", "public": "", "timetable": "", "checkapp": "", "phoneapp": "", "webapp": "", "restricted": ""},
 {"id": 2, "name": "Ghi", "address": "Ghi 53", "longitude": 7.1172322292086, "latitude": 43.6011346134398, "sampling": "", "public": "", "timetable": "", "checkapp": "", "phoneapp": "", "webapp": "", "restricted": ""}]
-
 var dictReg = {
-
-    
- 
     "Auvergne-Rhône-Alpes": [65324,70326,32569],
  
     "Bourgogne-Franche-Comté": [65324,70326,32569],
@@ -35,12 +31,13 @@ var dictReg = {
     "Provence-Alpes-Côte d'Azur" : [45324,90326,2569]
 };
 
-//chart
+
+//CHART
 const dataGeo = {
-    labels: ['Malade','Vaccinées','Mort'],
+    labels: ['Malades','Vaccinées','Morts'],
     datasets : [{
         label: "Malade",
-        backgroundColor: ['#61040D','#046115','#050101'],
+        backgroundColor: ['#f14b4d','#41c45d','#050101'],
         data: [5706378,16470369,105631]
     }]
 };
@@ -67,6 +64,7 @@ var chartGeo = new Chart(
 )
 
 
+//FUNCTIONS
 
 function style(feature) {
     return {
@@ -118,6 +116,7 @@ function updateData(e) {
     });
 }
 
+
 //MAP
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -133,7 +132,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 for (var i = 0; i < data.length; i++) {
     var marker = L.marker([data[i].latitude, data[i].longitude]);
     markers.addLayer(marker);
-    marker.bindPopup(data[i].name);
+    marker.bindPopup(data[i].name + "</br>" + data[i].address);
 }
 
 map.addLayer(markers);
@@ -144,5 +143,4 @@ let geoJSONLayer = L.geoJson(france, {
     style: style,
     onEachFeature: onEachFeature
 }).addTo(map);
-
 

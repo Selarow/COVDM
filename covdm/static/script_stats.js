@@ -11,9 +11,9 @@ const labelVAC = [
 const dataVAC = {
     labels: labelVAC,
     datasets : [{
-        label: "Evolution de la vaccination en France",
-        backgroundColor: '#61040D',
-        borderColor: '#61040D',
+        label: "Évolution de la vaccination en France",
+        backgroundColor: '#f14b4d',
+        borderColor: '#f14b4d',
         data: [0,32631,55681,11256]
     }]
 };
@@ -44,7 +44,7 @@ const dataAGE = {
     labels: labelAGE,
     datasets : [{
         label: "Malade",
-        backgroundColor: '#61040D',
+        backgroundColor: '#f14b4d',
         borderColor: '#61040D',
         data: [65324,50326,32569,30569,29865,27569,26539]
     },
@@ -54,7 +54,7 @@ const dataAGE = {
         data: [124,126,169,172,1365,1269,1339]
     },
     {   label: "Vaccinés",
-        backgroundColor: '#046115',
+        backgroundColor: '#41c45d',
         borderColor: '#046115',
         data : [0,0,9652,1235,3365,9269,8339]
     }
@@ -68,7 +68,6 @@ const configAGE = {
       plugins: {
         title: {
           display: true,
-          text: 'Chart.js Bar Chart - Stacked'
         },
       },
       responsive: true,

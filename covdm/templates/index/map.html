@@ -15,9 +15,10 @@
 
 <body>
     {% include 'index/navbar.html' with map="active" only %}
+    <h1>Centres de vaccination</h1>
     <div class="content">
         <div id="map"></div>
-        <div>
+        <div id="pie">
             <canvas id="chart"></canvas>
         </div>
     </div>
