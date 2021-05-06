@@ -46,11 +46,15 @@ class Patient :
     
     def convert_query(self) :
         query_vaccin = 0
+        query_sick = 0
+        query_dead = 0
         vaccine_date = "NULL"
         if self.vaccinated : 
             query_vaccin = 1 
             vaccine_date = f"'{self.date_vaccination}'"
-        query = f"({self.patient_id},{query_vaccin},{self.facility},{vaccine_date},{self.age})"
+        if self.sick : query_sick = 1
+        if self.dead : query_dead = 1
+        query = f"({self.patient_id},{query_vaccin},{query_sick},{query_dead},{self.facility},{vaccine_date},{self.age})"
         return query
     
     def convert_json(self) :
@@ -115,7 +119,7 @@ class DataBase :
         file.write(");\n") """
         
         #----------DB Insertion------------
-        file.write("INSERT INTO covdm_user(id,is_vaccinated,facility,vaccination_date,age) VALUES\n")
+        file.write("INSERT INTO covdm_user(id,is_vaccinated,sick,dead,facility,vaccination_date,age) VALUES\n")
         for i in range(1,len(self.db)) :
             file.write(self.db[i].convert_query())
             if i != len(self.db)-1 : file.write(",\n")
@@ -136,5 +140,5 @@ class DataBase :
     
     
 db_patient = DataBase(100000)
-d = db_patient.to_json()
+db_patient.convert_query()
 
