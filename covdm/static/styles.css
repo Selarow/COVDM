@@ -23,7 +23,14 @@ h1 {
 h2 {
     color: var(--grey);
     font-family: "Helvetica" !important;
-    font-size: 25px;
+    font-size: 18px !important;
+    text-align: center;
+}
+
+h3 {
+    color: var(--grey);
+    font-family: "Helvetica" !important;
+    font-size: 12px !important;
     text-align: center;
 }
 
@@ -101,8 +108,17 @@ p {
 }
 
 #form {
-    width: 50%;
-    border:1px solid;
-    border-color: gray;
-    padding:5px
-}
+
+       width: 50%;
+        border:1px solid;
+        border-color: gray;
+        padding:5px
+    }
+        
+    
+#form-btn {
+         text-align: center;
+         margin-top: 20px;
+     }
+    
+
