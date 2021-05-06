@@ -97,7 +97,7 @@ class DataBase :
             de_prob.append(True)
             de = random.choice(de_prob)
             #print("dead",d)
-            l = random.randint(1,3277)
+            l = random.randint(0,3276)
             ag = int
             if prob == 2 : ag = random.randint(18,70)
             else : ag = random.randint(70,90)
@@ -110,7 +110,7 @@ class DataBase :
         self.db = dic #add on db
         
     def convert_query(self) :
-        file = open("docs/query.txt","w")
+        file = open("query.txt","w")
         #------------DB Head---------------
         #--------all the code below respect the syntax and types of sqlite documentation-----
         """ file.write("CREATE DATABASE covdm;\n")

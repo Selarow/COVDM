@@ -18,7 +18,10 @@ class Center(models.Model):
 
 class User(models.Model):
 
-    birth = models.DateField()
-    isvac = models.BooleanField()
-    vacdate = models.DateField()
-    center_id = models.ForeignKey(Center, on_delete=models.CASCADE)
+    is_vaccinated = models.BooleanField()
+    sick = models.BooleanField()
+    dead = models.BooleanField()
+    center = models.ForeignKey(Center, on_delete=models.CASCADE)
+    vaccination_date = models.CharField(max_length=20, null=True)
+    age = models.IntegerField()
+    

@@ -1,3 +1,17 @@
+var centers = $.ajax({
+    url: 'getDatas',
+    type: 'GET',
+    dataType:'json',
+    success: function(data) {
+        console.log(data);
+        return data;
+    },
+    failure: function(data) { 
+        alert('Got an error dude');
+    },
+}); 
+console.log(centers);
+
 var map = L.map('map').setView([47, 2], 6);
 var markers = L.markerClusterGroup();
 var data = [{"id": 0, "name": "CH DU HAUT BUGEY - GEOVREISSET", "address": "1 RTE DE VEYZIAT 01108 OYONNAX CEDEX", "longitude": 5.62734768997551, "latitude": 46.2750589149894, "sampling": "", "public": "Personnel soignant/patients hospitalisés dans l'etablissement", "timetable": "", "checkapp": "", "phoneapp": "", "webapp": "", "restricted": ""},
