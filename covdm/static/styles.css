@@ -96,10 +96,12 @@ p {
 }
 
 #left {
+    margin-top: 50px;
     width: 45%;
 }
 
 #right {
+    margin-top: 50px;
     width: 45%;
 }
 
@@ -108,6 +110,7 @@ p {
 }
 
 #form {
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;

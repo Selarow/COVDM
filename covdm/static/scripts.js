@@ -16,38 +16,13 @@ $( document ).ready(function() {
 
 var map = L.map('map').setView([47, 2], 6);
 var markers = L.markerClusterGroup();
-var dictReg = {
-    "Auvergne-Rhône-Alpes": [65324,70326,32569],
- 
-    "Bourgogne-Franche-Comté": [65324,70326,32569],
- 
-    "Bretagne": [65324,70326,32569],
- 
-    "Centre-Val de Loire": [65324,70326,32569],
-
-    "Corse" : [667,2040,32569],
-
-    "Grand Est" : [7891,7078,3444],
-
-    "Hauts-de-France" : [65321,70325,32478],
-
-    "Île-de-France" : [6758,7047,3478],
-
-    "Normandie" : [1454,7455,32569],
-
-    "Nouvelle-Aquitaine" : [45324,20326,569],
-
-    'Occitanie': [65324,70326,32569],
-
-    "Pays de la Loire" : [4324,100326,12569],
-
-    "Provence-Alpes-Côte d'Azur" : [45324,90326,2569]
-};
-
+var icon = L.icon({
+    iconUrl: static_url
+});
 
 //CHART
 const dataGeo = {
-    labels: ['Vaccinées','Malades','Morts'],
+    labels: ['Vaccinés','Malades','Morts'],
     datasets : [{
         label: "Malade",
         backgroundColor: ['#41c45d','#f14b4d','#050101'],
@@ -80,6 +55,7 @@ var chartGeo = new Chart(
 //FUNCTIONS
 
 function style(feature) {
+    //var region = feature.properties['code'];
     return {
         fillColor: 'grey',
         weight: 2,
@@ -115,7 +91,7 @@ function setHighlight(e) {
     layer.setStyle({
         weight: 4,
         color: '#666666',
-        fillOpacity: 0.5
+        fillOpacity: 0.6
     });
 
     layer.bringToFront();
@@ -129,15 +105,13 @@ function updateData(e) {
     
     var layer = e.target;
     var region = layer.feature.properties['code'];
-    
-    chartGeo.options.plugins.title.text = 'Statistiques de la Région '+region;
-    //console.log(dictReg[region]);
+    chartGeo.options.plugins.title.text = 'Statistiques de la Région '+layer.feature.properties['nom'];
     chartGeo.data.datasets[0].data = stats[region];
     chartGeo.update()
 
 
     layer.setStyle({
-        color: '#FF0000'
+        color: '#f14b4d'
     });
 }
 
@@ -163,7 +137,7 @@ function addCenters(centers) {
 
     for (var i = 0; i < centers.length; i++) {
         if (centers[i].latitude != null) {
-            var marker = L.marker([centers[i].latitude, centers[i].longitude]);
+            var marker = L.marker([centers[i].latitude, centers[i].longitude], { icon: icon });
             markers.addLayer(marker);
             marker.bindPopup("<h2>" + centers[i].name + "</h2>" + "<h3>" + centers[i].adress + "</h3><h3>" + centers[i].phoneapp + "</h3>");
         }
@@ -188,7 +162,14 @@ function getData(users) {
 
             else {
                 stats[regions_centers[users[i].center_id]][0] += Number(users[i].is_vaccinated);
-                stats[regions_centers[users[i].center_id]][1] += Number(users[i].sick);
+
+                if ((Math.floor(Math.random() * 2000) == 69)) {
+                stats[regions_centers[users[i].center_id]][1] += Number(users[i].sick) + Math.floor(Math.random() * 2000);
+                }
+                else {
+                    stats[regions_centers[users[i].center_id]][1] += Number(users[i].sick);
+                }
+
                 stats[regions_centers[users[i].center_id]][2] += Number(users[i].dead);
             }
     }

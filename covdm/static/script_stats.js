@@ -5,14 +5,12 @@ var centers = $.ajax({
   type:'GET',
   dataType:'json',
   success:function(data){
-    console.log(data);
     return data;
   },
   failure: function(data){
     alert("Got an Error");
   },
 });
-console.log(centers);
 
 var arr = patients[0]
 var datV = [0,0,0,0,0,0];

@@ -3,10 +3,7 @@ from django.http import JsonResponse
 from .models import Center, User
 
 def index(request):
-    return redirect("home")
-
-def home(request):
-    return render(request, "index/home.html")
+    return redirect("map")
 
 def getCenters(request):
 
@@ -29,9 +26,6 @@ def map(request):
 
 def stats(request):
     return render(request, "index/stats.html")
-
-def about(request):
-    return render(request, "index/about.html")
 
 def form(request):
     return render(request, "index/form.html")
